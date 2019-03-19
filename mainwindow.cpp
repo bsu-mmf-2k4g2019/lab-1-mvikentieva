@@ -17,40 +17,43 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-    int spinexam , spin1, spin2, spin3;
 
-void MainWindow::on_spinexam_valueChanged(int arg1)
+
+void MainWindow::on_spinexam_valueChanged()
 {
-    spinexam=arg1;
+    ui->spinexam->value();
     ui->lcd_sessional->display(0);
     ui->lcd_total->display(0);
+
 
 }
 
 
-void MainWindow::on_spin1_valueChanged(int arg1)
+void MainWindow::on_spin1_valueChanged()
 {
-    spin1=arg1;
+    ui->spin1->value();
     ui->lcd_sessional->display(0);
     ui->lcd_total->display(0);
 }
-void MainWindow::on_spin2_valueChanged(int arg1)
+void MainWindow::on_spin2_valueChanged()
 {
-    spin2=arg1;
+    ui->spin2->value();
     ui->lcd_sessional->display(0);
     ui->lcd_total->display(0);
 }
-void MainWindow::on_spin3_valueChanged(int arg1)
+void MainWindow::on_spin3_valueChanged()
 {
-    spin3=arg1;
+    ui->spinexam->value();
     ui->lcd_sessional->display(0);
     ui->lcd_total->display(0);
 }
 
 void MainWindow::on_compute_clicked()
 {
-
-    ui->lcd_sessional->display(qRound((double)(spin1+spin2+spin3)/3));
-    ui->lcd_total->display(qRound((double)((spin1+spin2+spin3)/3)*0.4+spinexam*0.6));
-
+    int spinexam = ui->spinexam->value();
+    int spin1 = ui->spin1->value();
+    int spin2 = ui->spin2->value();
+    int spin3 = ui->spin3->value();
+    ui->lcd_sessional->display(qRound((double)(((spin1+spin2+spin3)/3))));
+    ui->lcd_total->display(qRound((double)((spin1+spin2+spin3)/3)*0.4+(spinexam*0.6)));
 }

@@ -17,13 +17,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_spinexam_valueChanged(int arg1);
+    void on_spinexam_valueChanged();
 
-    void on_spin1_valueChanged(int arg1);
+    void on_spin1_valueChanged();
 
-    void on_spin2_valueChanged(int arg1);
+    void on_spin2_valueChanged();
 
-    void on_spin3_valueChanged(int arg1);
+    void on_spin3_valueChanged();
 
     void on_compute_clicked();
 
