@@ -29,7 +29,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
+   <string notr="true">background:white;
 font: 8pt &quot;MS UI Gothic&quot;;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -59,6 +59,19 @@ font: 8pt &quot;MS UI Gothic&quot;;</string>
       <width>211</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton
+{
+border-width:5px;
+border-color:blue;
+border-style:outset;
+background:LightBlue;
+color:white;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+}
+</string>
     </property>
     <property name="text">
      <string>COMPUTE</string>
@@ -192,25 +205,6 @@ font: 8pt &quot;MS UI Gothic&quot;;</string>
      </item>
     </layout>
    </widget>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

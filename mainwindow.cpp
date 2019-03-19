@@ -54,6 +54,20 @@ void MainWindow::on_compute_clicked()
     int spin1 = ui->spin1->value();
     int spin2 = ui->spin2->value();
     int spin3 = ui->spin3->value();
+    int total = qRound((double)((spin1+spin2+spin3)/3)*0.4+(spinexam*0.6));
+if (spinexam<4)
+    {
+    ui->spinexam->setStyleSheet("color:red");
+    }
     ui->lcd_sessional->display(qRound((double)(((spin1+spin2+spin3)/3))));
-    ui->lcd_total->display(qRound((double)((spin1+spin2+spin3)/3)*0.4+(spinexam*0.6)));
+if (total>4)
+{
+    ui->lcd_total->display(total);
+}
+else
+{
+    ui->lcd_total->setStyleSheet({"color:red"});
+    ui->lcd_total->display(total);
+}
+
 }
